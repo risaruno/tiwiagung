@@ -1,0 +1,62 @@
+// FONT AWESOME
+@import "../fonts/fontawesome-free-6.0.0-web/scss/fontawesome.scss";
+@import "../fonts/fontawesome-free-6.0.0-web/scss/regular.scss";
+@import "../fonts/fontawesome-free-6.0.0-web/scss/solid.scss";
+@import "../fonts/fontawesome-free-6.0.0-web/scss/brands.scss";
+
+// WEDDING FLATICON
+@font-face {
+  font-family: "Wedding";
+  src: url("../fonts/Wedding/Flaticon.ttf");
+}
+
+// BRITTANY SIGNATURE
+@font-face {
+  font-family: "Brittany";
+  src: url("../fonts/BrittanySignature/BrittanySignature.ttf");
+}
+
+// OVERLOCK
+@font-face {
+  font-family: "Overlock";
+  src: url("../fonts/Overlock/Overlock-Regular.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overlock";
+  src: url("../fonts/Overlock/Overlock-Italic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Overlock";
+  src: url("../fonts/Overlock/Overlock-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overlock";
+  src: url("../fonts/Overlock/Overlock-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Overlock";
+  src: url("../fonts/Overlock/Overlock-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Overlock";
+  src: url("../fonts/Overlock/Overlock-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+body {
+  font-family: "Overlock";
+  font-weight: 500;
+  font-style: normal;
+}

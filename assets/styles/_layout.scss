@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $root-size;
+  color: $font-color;
+}
+
+a {
+  color: $font-color;
+  text-decoration: none;
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  @include background($rustic-background, 100%, center, #fcfcfcee, repeat);
+}
+
+/* PAGE-LOADER */
+
+/* LETTER */
+
+#landing {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    //Adjusting background size and position
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include background($cover-background, 300vh, 50% 50%);
+    filter: blur(8px);
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2;
+
+  .card-letter {
+    width: $min-width;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .letter {
+      font-size: 1.2em;
+
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .greetings {
+        font-size: 1.2em;
+      }
+
+      .guest {
+        display: block;
+        font-weight: 700;
+      }
+    }
+  }
+  transition: 1s;
+}
+
+/* SECTIONS */
+
+// NAVIGATION
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+// AUDIO
+
+#audio {
+  position: fixed;
+  top: 1vh;
+  right: 1vh;
+  z-index: 5;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+// COVER
+
+// SECTION
+
+.section {
+  width: 100vw;
+  padding: 0 $side-padding;
+  @include flex();
+}
+
+// COVER
+
+#cover {
+  @include background();
+  height: 100vh;
+  text-align: center;
+  color: $light-color;
+  font-size: $h4;
+
+  //flex
+  gap: 3em;
+
+  .cover-head {
+    @include flex(1.4em);
+    font-size: $h3;
+
+    .couple {
+      font-family: "Brittany";
+      font-size: $cover;
+      line-height: 1.4em;
+
+      .groom {
+        display: block;
+      }
+    }
+  }
+  .cover-foot {
+    @include flex(1em);
+  }
+}
+
+// COUPLE
+
+#couple {
+  text-align: center;
+  padding-top: 8em;
+  padding-bottom: 8em;
+
+  //flex
+  gap: 5em;
+
+  .married {
+    font-size: $h2;
+  }
+  .profile-container {
+    @include flex($gap: 5vw, $direction: row, $wrap: wrap);
+    width: 100%;
+    .profile {
+      width: 300px;
+      padding: 20px;
+      .photo-container {
+        img {
+          @extend .shadows;
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+        }
+      }
+      .name-container {
+        @include flex(2em);
+        .couple-name {
+          .first {
+            font-size: $h1;
+            display: block;
+          }
+          .last {
+            font-size: $h3;
+            display: block;
+          }
+        }
+        .extend-name {
+          @include flex(1em);
+          .parents-name {
+            position: relative;
+            font-size: $h4;
+          }
+          hr {
+            width: 100%;
+            height: 3px;
+            border-radius: 3px;
+            background-color: $dark-color;
+          }
+          .instagram-name {
+            @include flex(0.25em, $direction: row);
+            font-size: $h3;
+          }
+        }
+      }
+    }
+  }
+}
+
+// EVENT
+
+#event {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    //Adjusting background size and position
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include background($cover-background, 500vh, 50% 50%);
+    filter: blur(8px);
+  }
+  padding-top: 8em;
+  padding-bottom: 8em;
+  .event-container {
+    @include flex(3em);
+    .event-schedule {
+      @include flex($gap: 3em, $direction: row);
+      .card-akad,
+      .card-resepsi {
+        .content {
+          padding: 0 10px;
+          @include flex(0.25em, center, column, flex-start);
+          .detail {
+            @include flex(0.25em, center, row, flex-start);
+            * {
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+    .event-details {
+      @include flex(3em);
+      > div {
+        width: $min-width;
+      }
+
+      //COUNTDOWN
+      .card-count-down {
+        .content {
+          @include flex(unset, space-around, row);
+          .count-container {
+            @include flex();
+            .number {
+              font-size: $h2;
+            }
+            .set {
+              font-size: $h3;
+            }
+          }
+        }
+      }
+
+      //DRESSCODE
+      .card-dress-code {
+        .content {
+          text-align: center;
+          font-size: $h3;
+        }
+      }
+
+      //LOCATION {
+      .card-location {
+        .content {
+          iframe {
+            width: 100%;
+            height: 400px;
+          }
+        }
+      }
+
+      //HEALTHPROTOCOLS
+      .card-health-protocols {
+        .content {
+          .protocols-container {
+            @include flex(1em);
+            .protocols-text {
+              text-align: justify;
+            }
+            .protocols-icons {
+              @include flex(unset, space-around, row, center, wrap);
+              .protocols-icon {
+                @include flex();
+                flex: 50%;
+                height: 100%;
+                img {
+                  width: 100px;
+                }
+                .icon-detail {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// GALLERY
+
+#gallery {
+  padding-top: 8em;
+  padding-bottom: 8em;
+  .gallery-container {
+    @include flex(0.5em);
+    img {
+      width: $min-width;
+      flex: 50%;
+      border-radius: $border-radius;
+      @extend .shadows;
+    }
+  }
+}
+
+// WISH & PRAY
+
+#wish {
+  @include flex(10vh);
+  padding-top: 8em;
+  padding-bottom: 8em;
+  .kutipan-container {
+    @include flex();
+    .kutipan-content {
+      @include flex(1em, $a-items: flex-start);
+      width: $min-width;
+      padding: 20px;
+      border-radius: $border-radius;
+      @extend .shadows;
+      .ayat {
+        font-size: $h4;
+        text-align: justify;
+      }
+      .surah {
+        font-size: $h4;
+        font-weight: 700;
+        font-style: italic;
+      }
+    }
+  }
+  .wish-gift-container {
+    @include flex(3em);
+    width: 100%;
+    .gift-container {
+      @include flex();
+      .gift-caption {
+        padding: 10px;
+      }
+      .gift-box-container {
+        width: 50%;
+        padding: 10px 20px;
+        @extend .box;
+        img.gift-box {
+          width: 100%;
+        }
+      }
+    }
+    .wish-container {
+      width: $min-width;
+      .card-wish {
+        .content {
+          form.wish-form {
+            @include flex(0.5em);
+          }
+        }
+      }
+    }
+  }
+}

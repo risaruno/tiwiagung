@@ -1,0 +1,75 @@
+/* LAYOUT VARIABLES */
+$min-width: #{"min(80%, 500px)"};
+$border-radius: 10px;
+$side-padding: 20%;
+
+/* COSTUMIZED COLOR */
+$dark-color: #3d2828;
+$light-color: #fcfcfc;
+
+/* BUTTON & FORM COLOR */
+$btn-bg-color: #e3b7a3;
+$btn-font-color: $dark-color;
+$field-color: #f9f5f3;
+
+/* BACKGROUND COLOR & IMAGES */
+$bg-color: $light-color;
+$cover-background: url("../images/background/cover_bg.JPG");
+$rustic-background: url("../images/background/rustic_bg.png");
+$blend-color: #0000006e;
+
+/* FONT COLOR & SIZE */
+$font-color: $dark-color;
+
+$root-size: 18px;
+$cover: 4rem;
+$h1: 2.4rem;
+$h2: 2rem;
+$h3: 1.6rem;
+$h4: 1.2rem;
+
+.heading {
+  font-size: $h1;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+/* ANIMATIONS */
+
+$transition-time: 500ms;
+
+/* MIXIN VARIABLES */
+
+@mixin background(
+  $b-url: $cover-background,
+  $b-size: cover,
+  $b-pos: center,
+  $b-color: $blend-color,
+  $b-repeat: no-repeat,
+  $b-mode: soft-light,
+  $b-attach: scroll
+) {
+  background-image: $b-url;
+  background-color: $b-color;
+  background-position: $b-pos;
+  background-repeat: $b-repeat;
+  background-attachment: $b-attach;
+  background-blend-mode: $b-mode;
+  background-size: $b-size;
+}
+
+@mixin flex(
+  $gap: 0px,
+  $j-content: center,
+  $direction: column,
+  $a-items: center,
+  $wrap: nowrap
+) {
+  display: flex;
+  gap: $gap;
+  flex-flow: $direction $wrap;
+  justify-content: $j-content;
+  align-items: $a-items;
+}
