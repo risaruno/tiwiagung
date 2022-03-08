@@ -81,14 +81,26 @@ body {
   transition: 1s;
 }
 
-/* SECTIONS */
+/* CONTENT */
 
 // NAVIGATION
 
-nav {
+#navigation {
+  @include flex();
+
   position: fixed;
-  top: 0;
-  left: 0;
+  width: 200px;
+  top: 10vh;
+  right: -100px;
+  left: unset;
+  bottom: unset;
+  z-index: 10;
+  li {
+    cursor: pointer;
+    i.icon {
+      font-family: "Wedding";
+    }
+  }
 }
 
 // AUDIO
@@ -231,9 +243,10 @@ nav {
   .event-container {
     @include flex(3em);
     .event-schedule {
-      @include flex($gap: 3em, $direction: row);
+      @include flex($gap: 3em, $direction: row, $wrap: wrap);
       .card-akad,
       .card-resepsi {
+        width: #{"min(80vw, 400px)"};
         .content {
           padding: 0 10px;
           @include flex(0.25em, center, column, flex-start);

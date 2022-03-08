@@ -9602,11 +9602,37 @@ body {
   font-weight: 700;
 }
 
-/* SECTIONS */
-nav {
+/* CONTENT */
+#navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
-  top: 0;
-  left: 0;
+  width: 200px;
+  top: 10vh;
+  right: -100px;
+  left: unset;
+  bottom: unset;
+  z-index: 10;
+}
+
+#navigation li {
+  cursor: pointer;
+}
+
+#navigation li i.icon {
+  font-family: "Wedding";
 }
 
 #audio {
@@ -9866,14 +9892,19 @@ nav {
   gap: 3em;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#event .event-container .event-schedule .card-akad,
+#event .event-container .event-schedule .card-resepsi {
+  width: min(80vw, 400px);
 }
 
 #event .event-container .event-schedule .card-akad .content,
