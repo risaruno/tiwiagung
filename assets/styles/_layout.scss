@@ -91,14 +91,32 @@ body {
   position: fixed;
   width: 200px;
   top: 10vh;
-  right: -100px;
+  right: 00px;
   left: unset;
   bottom: unset;
   z-index: 10;
-  li {
-    cursor: pointer;
-    i.icon {
-      font-family: "Wedding";
+  ul {
+    @include flex($a-items: flex-end);
+    width: 200px;
+    height: fit-content;
+    background-color: $bg-color;
+    li {
+      @include flex();
+      width: 60%;
+      height: 80px;
+      cursor: pointer;
+      list-style: none;
+      background-color: blue;
+      i.icon {
+        font-style: normal;
+        font-family: "Wedding";
+        &::before {
+          width: 100%;
+        }
+      }
+      &:hover {
+        width: 100%;
+      }
     }
   }
 }
