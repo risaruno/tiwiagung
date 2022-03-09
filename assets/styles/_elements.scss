@@ -96,6 +96,9 @@ form {
 // ICONS
 
 .icon {
+  &.music {
+    @include fa-icon-solid($fa-var-music);
+  }
   &.instagram {
     @include fa-icon-brands($fa-var-instagram);
   }
@@ -117,6 +120,29 @@ form {
   @extend .scaleUp;
 }
 
+// GLASS
+
+.glass {
+  background: linear-gradient(
+    218.99deg,
+    rgba(255, 255, 255, 0.4) 4.42%,
+    #e3b7a383 85.6%
+  );
+  backdrop-filter: blur(5px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  &:hover,
+  &.active {
+    background: linear-gradient(
+      218.99deg,
+      rgba(255, 255, 255, 0.7) 4.42%,
+      #e3b7a3d7 85.6%
+    );
+  }
+}
+
 // ANIMATIONS
 
 .scaleUp {
@@ -134,4 +160,16 @@ form {
   &:hover {
     background-color: $blend-color;
   }
+}
+
+// SCROLL BAR
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: $dark-color;
 }
