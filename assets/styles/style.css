@@ -9578,7 +9578,7 @@ html {
   color: #3d2828;
 }
 
-body {
+* {
   font-family: "Overlock";
   font-weight: 500;
   font-style: normal;

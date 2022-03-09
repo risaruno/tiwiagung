@@ -7,6 +7,17 @@ window.onload = () => {
     loader.classList.add("loaded");
   }, 5000);
 
+  // GUEST NAME
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  var guestBox = document.querySelector("#guest");
+  var nameBox = document.querySelector("#name");
+  var guest = urlParams.get("guest");
+  if (guest != null) {
+    guestBox.innerText = guest;
+    nameBox.value = guest;
+  }
+
   /* Open Button */
   document.getElementById("open").addEventListener("click", () => {
     window.scrollTo(0, 0);
@@ -29,7 +40,7 @@ window.onload = () => {
       scrollTrigger: {
         trigger: "body",
         start: "200 top",
-        end: `bottom bottom`,
+        end: `bottom-=100px bottom`,
         toggleClass: { targets: "#navigation", className: "show" },
       },
     });

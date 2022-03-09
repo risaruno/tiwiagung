@@ -15,19 +15,17 @@ body#m-body {
     margin: 5%;
   }
   > #messages {
-    @include flex();
+    @include flex(1em);
     > .card-message {
-      @include flex($a-items: flex-start);
+      @include flex(0.5em, $a-items: flex-start);
       //border-radius: $radius;
       width: $min-width;
       padding: 3% 5%;
-      margin: 1vh 0;
       .m-name {
         font-size: $h3;
       }
       .m-wish {
         text-align: justify;
-        word-break: break-all;
       }
       .m-date {
         align-self: flex-end;

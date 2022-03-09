@@ -9578,7 +9578,7 @@ html {
   color: #3d2828;
 }
 
-body {
+* {
   font-family: "Overlock";
   font-weight: 500;
   font-style: normal;
@@ -9891,7 +9891,7 @@ body#m-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0px;
+  gap: 1em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -9908,7 +9908,7 @@ body#m-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0px;
+  gap: 0.5em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -9921,7 +9921,6 @@ body#m-body {
           align-items: flex-start;
   width: min(80vw, 500px);
   padding: 3% 5%;
-  margin: 1vh 0;
 }
 
 #content-messages > #messages > .card-message .m-name {
@@ -9930,7 +9929,6 @@ body#m-body {
 
 #content-messages > #messages > .card-message .m-wish {
   text-align: justify;
-  word-break: break-all;
 }
 
 #content-messages > #messages > .card-message .m-date {
