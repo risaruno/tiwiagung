@@ -69,10 +69,11 @@ div[class^="btn\-"] {
 // FORM
 
 form {
+  @include flex(0.5em);
   .form-group {
     @include flex(0.25em, $a-items: flex-start);
     width: 100%;
-    .label {
+    label {
       font-size: $h3;
     }
     input,
@@ -91,6 +92,13 @@ form {
       resize: none;
     }
   }
+  input.btn-fill {
+    @extend .btn;
+  }
+}
+
+.after-form {
+  @include flex(0.5em);
 }
 
 // ICONS
@@ -98,6 +106,12 @@ form {
 .icon {
   &.music {
     @include fa-icon-solid($fa-var-music);
+  }
+  &.mute {
+    @include fa-icon-solid($fa-var-volume-mute);
+  }
+  &.arrow-down {
+    @include fa-icon-solid($fa-var-circle-chevron-down);
   }
   &.instagram {
     @include fa-icon-brands($fa-var-instagram);
@@ -111,13 +125,9 @@ form {
   &.address {
     @include fa-icon-solid($fa-var-map-marked-alt);
   }
-}
-
-// SHADOWS
-
-.shadows {
-  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-  @extend .scaleUp;
+  &.close {
+    @include fa-icon-solid($fa-var-close);
+  }
 }
 
 // GLASS
@@ -145,10 +155,17 @@ form {
 
 // ANIMATIONS
 
-.scaleUp {
+@mixin scaleUp($scale: 1.02) {
   transition: $transition-time;
   &:hover {
-    transform: scale(1.02);
+    transform: scale($scale);
+  }
+}
+
+.shadows {
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  @include scaleUp();
+  &:hover {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
     z-index: 3;
   }
@@ -157,6 +174,7 @@ form {
 .box {
   transition: $transition-time;
   border-radius: $border-radius;
+  cursor: pointer;
   &:hover {
     background-color: $blend-color;
   }

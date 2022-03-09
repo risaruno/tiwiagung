@@ -14,10 +14,14 @@
   }
 
   #navigation {
+    transition: $transition-time;
+    &.show {
+      bottom: 0px;
+    }
     justify-content: center;
     top: unset;
     right: unset;
-    bottom: 0;
+    bottom: -10vh;
     left: 0;
     width: 100vw;
     height: 10vh;
@@ -28,6 +32,7 @@
       height: 100%;
       li {
         width: 100%;
+        border-radius: 10px 10px 0 0;
         &:hover,
         &.active {
           width: 100%;

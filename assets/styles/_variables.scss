@@ -14,8 +14,8 @@ $field-color: #f9f5f3;
 
 /* BACKGROUND COLOR & IMAGES */
 $bg-color: $light-color;
-$cover-background: url("../images/background/cover_bg.JPG");
-$rustic-background: url("../images/background/rustic_bg.png");
+$cover-background: url("../images/background/cover_bg.png");
+$rustic-background: url("../images/background/rustic-bg.png");
 $blend-color: #0000006e;
 
 /* FONT COLOR & SIZE */
@@ -33,7 +33,7 @@ $h4: 1.2rem;
   font-weight: 700;
   font-style: italic;
   text-align: center;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 }
 
 /* ANIMATIONS */
@@ -72,4 +72,10 @@ $transition-time: 500ms;
   flex-flow: $direction $wrap;
   justify-content: $j-content;
   align-items: $a-items;
+}
+
+/* DEFAULT STYLES */
+
+body {
+  @include background($rustic-background, 100%, center, unset, repeat);
 }

@@ -56,6 +56,11 @@
   font-style: italic;
 }
 
+html {
+  font-size: $root-size;
+  color: $font-color;
+}
+
 body {
   font-family: "Overlock";
   font-weight: 500;

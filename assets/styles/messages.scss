@@ -1,0 +1,37 @@
+@import "variables";
+@import "fonts";
+@import "elements";
+@import "perspectives";
+
+body#m-body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#content-messages {
+  > .title {
+    font-size: $h2;
+    text-align: center;
+    margin: 5%;
+  }
+  > #messages {
+    @include flex();
+    > .card-message {
+      @include flex($a-items: flex-start);
+      //border-radius: $radius;
+      width: $min-width;
+      padding: 3% 5%;
+      margin: 1vh 0;
+      .m-name {
+        font-size: $h3;
+      }
+      .m-wish {
+        text-align: justify;
+        word-break: break-all;
+      }
+      .m-date {
+        align-self: flex-end;
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/messages.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/icons/kahfiart/kahfiart_logo.png"
+    />
+    <title>Messages for Tiwi & Agung | KahfiArt</title>
+  </head>
+  <body id="m-body">
+    <div id="content-messages">
+      <div class="title">Messages for Tiwi & Agung</div>
+      <div id="messages">
+        <script>
+          $(document).ready(function () {
+            var pusher = new Pusher("6955608fa11f5638ae70", {
+              cluster: "ap1",
+            });
+            var channel = pusher.subscribe("kahfiart");
+            channel.bind("tiwiagung", function (data) {
+              var date = new Date(data.time);
+              var dateformat = dateFormat(date);
+              var newItem = `<div class='card-message'>
+                    <div class='m-name'>
+                    ${data.name}
+                    </div>
+                    <div class='m-wish'>
+                    ${data.message}
+                    </div>
+                    <div class='m-date'>
+                    ${dateformat}
+                    </div>
+                    </div>`;
+              $("#messages").prepend(newItem);
+            });
+
+            $.ajax({
+              url: "../action/load.php",
+              dataType: "JSON",
+              success: function (datas) {
+                var data = datas.data;
+                var html = "";
+                $.each(data, function (i, data) {
+                  var date = new Date(data.time);
+                  var dateformat = dateFormat(date);
+                  html = `<div class='card-message'>
+                    <div class='m-name'>
+                    ${data.name}
+                    </div>
+                    <div class='m-wish'>
+                    ${data.message}
+                    </div>
+                    <div class='m-date'>
+                    ${dateformat}
+                    </div>
+                    </div>`;
+                });
+                $("#messages").html(html);
+              },
+            });
+
+            function dateFormat(date) {
+              var d = date.getDate();
+              var m = date.getMonth();
+              switch (m) {
+                case 0:
+                  m = "Jan";
+                  break;
+                case 1:
+                  m = "Feb";
+                  break;
+                case 2:
+                  m = "Mar";
+                  break;
+                case 3:
+                  m = "Apr";
+                  break;
+                case 4:
+                  m = "Mei";
+                  break;
+                case 5:
+                  m = "Jun";
+                  break;
+                case 6:
+                  m = "Jul";
+                  break;
+                case 7:
+                  m = "Agu";
+                  break;
+                case 8:
+                  m = "Sep";
+                  break;
+                case 9:
+                  m = "Okt";
+                  break;
+                case 10:
+                  m = "Nov";
+                  break;
+                case 11:
+                  m = "Des";
+                  break;
+              }
+              var y = date.getFullYear();
+              var H = ("0" + date.getHours()).slice(-2);
+              var h = H <= 12 ? H : H - 12;
+              var i = ("0" + date.getMinutes()).slice(-2);
+              var a = date.getHours() <= 12 ? "AM" : "PM";
+              var dateformat =
+                h + ":" + i + " " + a + ", " + d + " " + m + " " + y;
+              return dateformat;
+            }
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

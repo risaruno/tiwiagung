@@ -24,7 +24,7 @@
       <div class="card-letter">
         <div class="letter">
           <p class="greetings">
-            Kepada Yth <span class="guest"> Tamu Undangan</span>
+            Kepada Yth <span id="guest">Tamu Undangan</span>
           </p>
           <p class="content">
             Kami mengundang anda untuk menghadiri momen spesial kami.
@@ -53,8 +53,12 @@
           </li>
         </ul>
       </nav>
-      <div id="audio">
-        <audio src="#" loop id="audio"></audio>
+      <div id="audio-btn">
+        <audio
+          src="assets/audio/Pamungkas - One Only.mp3"
+          loop
+          id="audio"
+        ></audio>
         <i class="icon music" id="audio-icon"></i>
       </div>
       <div id="cover" class="section">
@@ -69,6 +73,7 @@
         <div class="cover-foot">
           <div class="btn-content" id="save">Save Date</div>
           <div class="date">20 Maret 2022</div>
+          <i class="icon arrow-down" data-target="couple"></i>
         </div>
       </div>
       <div id="couple" class="section">
@@ -91,7 +96,10 @@
                   Putri Ketiga dari Bpk. Karyono dan Ibu Darsih
                 </div>
                 <hr />
-                <a href="#" class="instagram-name"
+                <a
+                  href="https://www.instagram.com/pratiwihtami/"
+                  target="_blank"
+                  class="instagram-name"
                   ><i class="icon instagram"></i>pratiwihtami</a
                 >
               </div>
@@ -114,7 +122,10 @@
                   Putra Kedua dari Bpk. Suyadi dan Ibu Rr. Umi Budiwati
                 </div>
                 <hr />
-                <a href="#" class="instagram-name"
+                <a
+                  href="https://www.instagram.com/sudahfajar/"
+                  target="_blank"
+                  class="instagram-name"
                   ><i class="icon instagram"></i>sudahfajar</a
                 >
               </div>
@@ -235,6 +246,22 @@
                       /><span class="icon-detail">Tidak Bersentuhan</span>
                     </div>
                   </div>
+                  <div class="protocols-attribution">
+                    Icons made by
+                    <a
+                      target="_blank"
+                      href="https://www.freepik.com"
+                      title="Freepik"
+                      >Freepik</a
+                    >
+                    from
+                    <a
+                      target="_blank"
+                      href="https://www.flaticon.com/"
+                      title="Flaticon"
+                      >www.flaticon.com</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -245,35 +272,35 @@
         <div class="heading">Gallery</div>
         <div class="gallery-container">
           <img
-            src="assets/images/gallery/00. tiwi-agung.JPG"
+            src="assets/images/gallery/resized/00. tiwi-agung.png"
             alt="Tiwi & Agung"
           />
           <img
-            src="assets/images/gallery/01. tiwi-agung.JPG"
+            src="assets/images/gallery/resized/01. tiwi-agung.png"
             alt="Tiwi & Agung"
           />
           <img
-            src="assets/images/gallery/02. tiwi-agung.JPG"
+            src="assets/images/gallery/resized/02. tiwi-agung.png"
             alt="Tiwi & Agung"
           />
           <img
-            src="assets/images/gallery/03. tiwi-agung.JPG"
+            src="assets/images/gallery/resized/03. tiwi-agung.png"
             alt="Tiwi & Agung"
           />
           <img
-            src="assets/images/gallery/04. tiwi-agung.JPG"
+            src="assets/images/gallery/resized/04. tiwi-agung.png"
             alt="Tiwi & Agung"
           />
           <img
-            src="assets/images/gallery/05. tiwi-agung.JPG"
+            src="assets/images/gallery/resized/05. tiwi-agung.png"
             alt="Tiwi & Agung"
           />
           <img
-            src="assets/images/gallery/06. tiwi-agung.JPG"
+            src="assets/images/gallery/resized/06. tiwi-agung.png"
             alt="Tiwi & Agung"
           />
           <img
-            src="assets/images/gallery/07. tiwi-agung.JPG"
+            src="assets/images/gallery/resized/07. tiwi-agung.png"
             alt="Tiwi & Agung"
           />
         </div>
@@ -281,7 +308,7 @@
       <div id="wish" class="section">
         <div class="kutipan-container">
           <div class="heading">Kutipan Ayat</div>
-          <div class="kutipan-content">
+          <div class="card-kutipan">
             <p class="ayat">
               "Dan di antara ayat-ayat-Nya ialah Dia menciptakan untukmu
               istri-istri dari jenismu sendiri, supaya kamu merasa nyaman
@@ -301,36 +328,74 @@
               <img src="assets/icons/Freepik/package.png" class="gift-box" />
             </div>
           </div>
-          <div class="wish-container">
-            <div class="card-wish">
-              <div class="title">Wish & Pray</div>
+          <div id="modal">
+            <div class="card-modal">
+              <div class="title">
+                Send Gifts<i id="close-box" class="icon close"></i>
+              </div>
               <div class="content">
-                <form action="#" class="wish-form">
+                <p>
+                  Jika tamu undangan berkenan untuk memberikan hadiah kepada
+                  kami, Silakan kirim melalui informasi di bawah ini.
+                </p>
+                <form>
                   <div class="form-group">
-                    <div class="label">Nama</div>
-                    <input type="text" name="name" />
+                    <label for="transfer">Bank Transfer</label
+                    ><textarea name="transfer" readonly>
+Bank BRI 016201052857500
+(a.n Fajar Agung Wicaksono)</textarea
+                    >
                   </div>
                   <div class="form-group">
-                    <div class="label">Pesan</div>
-                    <textarea name="message"></textarea>
+                    <label for="package">Alamat penerima</label
+                    ><textarea name="package"readonly>
+Pratiwi Hutami - (+62)812-2302-4025
+Dusun Citamiang, RT.012/RW.003, Desa Cintaratu, Kec Lakbok. Ciamis, Jawa Barat</textarea
+                    >
                   </div>
-                  <div type="button" class="btn-fill">Kirim</div>
                 </form>
               </div>
             </div>
           </div>
+          <div class="wish-container">
+            <div class="card-wish">
+              <div class="title">Wish & Pray</div>
+              <div class="content">
+                <form class="wish-form" method="post" id="wish-form">
+                  <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" name="name" id="name"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea name="message" id="message"></textarea>
+                  </div>
+                  <input type="submit" class="btn-fill" value="Kirim">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="thank-you">
+            Terima Kasih
+            <div>- Tiwi & Agung -</d>
+          </div>
         </div>
       </div>
+    </div>
+    <div id="footer">
+      <div>Design By Kahfiart</div>
+      <a target="_blank" href="https://kahfi.art"
+        ><img src="./assets/icons/kahfiart/kahfiart_logo.png" alt="Kahfi Art"
+      /></a>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CSSRulePlugin.min.js"></script> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
 
-    <!-- <script src="assets/js/ajax.js"></script> -->
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/ajax.js"></script>
+    <script src="assets/js/app.js" defer></script>
   </body>
 </html>
