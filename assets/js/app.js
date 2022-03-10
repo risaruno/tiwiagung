@@ -110,18 +110,18 @@ window.onload = () => {
 
   /* MODAL BOX */
 
-  let box = document.querySelector(".gift-box");
-  let modal = document.getElementById("modal");
-  box.addEventListener("click", function () {
-    modal.classList.toggle("show");
-    loader.classList.toggle("modal-on");
-    gsap.from(".card-modal", { opacity: 0, y: -50, duration: 0.5 });
-  });
-  let closeBox = document.querySelector("#close-box");
-  closeBox.addEventListener("click", function () {
-    modal.classList.toggle("show");
-    loader.classList.toggle("modal-on");
-  });
+  // let box = document.querySelector(".gift-box");
+  // let modal = document.getElementById("modal");
+  // box.addEventListener("click", function () {
+  //   modal.classList.toggle("show");
+  //   loader.classList.toggle("modal-on");
+  //   gsap.from(".card-modal", { opacity: 0, y: -50, duration: 0.5 });
+  // });
+  // let closeBox = document.querySelector("#close-box");
+  // closeBox.addEventListener("click", function () {
+  //   modal.classList.toggle("show");
+  //   loader.classList.toggle("modal-on");
+  // });
 
   /* COUNTDOWN */
   let dDay = new Date("March 20, 2022 08:00:00").getTime();

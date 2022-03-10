@@ -444,32 +444,6 @@ a {
     width: $min-width;
     @include flex(3em);
     .gift-container {
-      @include flex();
-      .gift-caption {
-        padding: 10px;
-      }
-      .gift-box-container {
-        width: 50%;
-        padding: 10px 20px;
-        @extend .box;
-        img.gift-box {
-          width: 100%;
-        }
-      }
-    }
-    #modal {
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      top: 0;
-      left: 0;
-      opacity: 1;
-      z-index: 11;
-      @include flex();
-
-      display: none;
-      background-color: $blend-color;
       .card-modal {
         width: $min-width;
         position: relative;
@@ -484,9 +458,6 @@ a {
             text-align: justify;
           }
         }
-      }
-      &.show {
-        display: flex;
       }
     }
     .wish-container {

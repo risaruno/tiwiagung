@@ -9578,7 +9578,7 @@ html {
   color: #3d2828;
 }
 
-* {
+body {
   font-family: "Overlock";
   font-weight: 500;
   font-style: normal;
@@ -9716,6 +9716,12 @@ form .form-group textarea {
 form .form-group textarea {
   min-height: 120px;
   resize: none;
+}
+
+form input.btn-fill {
+  font-family: "Overlock";
+  font-weight: 500;
+  font-style: normal;
 }
 
 .after-form {

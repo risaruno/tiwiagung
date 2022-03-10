@@ -94,6 +94,9 @@ form {
   }
   input.btn-fill {
     @extend .btn;
+    font-family: "Overlock";
+    font-weight: 500;
+    font-style: normal;
   }
 }
 
