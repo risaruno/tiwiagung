@@ -91,6 +91,9 @@ form {
       min-height: 120px;
       resize: none;
     }
+    textarea:read-only {
+      background-color: $bg-color;
+    }
   }
   input.btn-fill {
     @extend .btn;

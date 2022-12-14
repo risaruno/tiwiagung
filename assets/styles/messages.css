@@ -9599,6 +9599,12 @@ form .form-group textarea {
   min-height: 120px;
   resize: none;
 }
+form .form-group textarea:-moz-read-only {
+  background-color: #fcfcfc;
+}
+form .form-group textarea:read-only {
+  background-color: #fcfcfc;
+}
 form input.btn-fill {
   font-family: "Overlock";
   font-weight: 500;

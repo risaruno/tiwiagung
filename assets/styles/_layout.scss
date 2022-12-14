@@ -255,6 +255,9 @@ a {
       }
       .name-container {
         @include flex(2em);
+        background-color: #ffffffaa;
+        padding: 5px;
+        border-radius: 10px;
         .couple-name {
           .first {
             font-size: $h1;
