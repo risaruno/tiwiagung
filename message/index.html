@@ -12,11 +12,11 @@
       type="image/x-icon"
       href="../assets/icons/kahfiart/kahfiart_logo.png"
     />
-    <title>Messages for Tiwi & Agung | KahfiArt</title>
+    <title>Messages for Siska & Robi | KahfiArt</title>
   </head>
   <body id="m-body">
     <div id="content-messages">
-      <div class="title">Messages for Tiwi & Agung</div>
+      <div class="title">Messages for Siska & Robi</div>
       <div id="messages">
         <script>
           $(document).ready(function () {
@@ -24,7 +24,7 @@
               cluster: "ap1",
             });
             var channel = pusher.subscribe("kahfiart");
-            channel.bind("tiwiagung", function (data) {
+            channel.bind("siskarobi", function (data) {
               var date = new Date(data.time);
               var dateformat = dateFormat(date);
               var newItem = `<div class='card-message'>

@@ -37,13 +37,13 @@ body {
 .fa,
 .fas,
 .fa-solid,
-.icon.music,
-.icon.mute,
-.icon.arrow-down,
-.icon.date,
-.icon.time,
-.icon.address,
 .icon.close,
+.icon.address,
+.icon.time,
+.icon.date,
+.icon.arrow-down,
+.icon.mute,
+.icon.music,
 .far,
 .fa-regular,
 .fal,
@@ -64,7 +64,7 @@ body {
   text-rendering: auto;
 }
 
-.icon.music, .icon.mute, .icon.arrow-down, .icon.instagram, .icon.date, .icon.time, .icon.address, .icon.close {
+.icon.close, .icon.address, .icon.time, .icon.date, .icon.instagram, .icon.arrow-down, .icon.mute, .icon.music {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -122,14 +122,14 @@ body {
 
 .fa-xs {
   font-size: 0.75em;
-  line-height: 0.08333em;
+  line-height: 0.0833333337em;
   vertical-align: 0.125em;
 }
 
 .fa-sm {
   font-size: 0.875em;
-  line-height: 0.07143em;
-  vertical-align: 0.05357em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
 }
 
 .fa-lg {
@@ -140,7 +140,7 @@ body {
 
 .fa-xl {
   font-size: 1.5em;
-  line-height: 0.04167em;
+  line-height: 0.0416666682em;
   vertical-align: -0.125em;
 }
 
@@ -160,7 +160,6 @@ body {
   margin-left: var(--fa-li-margin, 2.5em);
   padding-left: 0;
 }
-
 .fa-ul > li {
   position: relative;
 }
@@ -316,297 +315,227 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .fa-beat,
-  .fa-bounce,
-  .fa-fade,
-  .fa-beat-fade,
-  .fa-flip,
-  .fa-pulse,
-  .fa-shake,
-  .fa-spin,
-  .fa-spin-pulse {
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
     -webkit-animation-delay: -1ms;
             animation-delay: -1ms;
     -webkit-animation-duration: 1ms;
             animation-duration: 1ms;
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
-    -webkit-transition-delay: 0s;
-            transition-delay: 0s;
-    -webkit-transition-duration: 0s;
-            transition-duration: 0s;
+    transition-delay: 0s;
+    transition-duration: 0s;
   }
 }
-
 @-webkit-keyframes fa-beat {
   0%, 90% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   45% {
-    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
-            transform: scale(var(--fa-beat-scale, 1.25));
+    transform: scale(var(--fa-beat-scale, 1.25));
   }
 }
-
 @keyframes fa-beat {
   0%, 90% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   45% {
-    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
-            transform: scale(var(--fa-beat-scale, 1.25));
+    transform: scale(var(--fa-beat-scale, 1.25));
   }
 }
-
 @-webkit-keyframes fa-bounce {
   0% {
-    -webkit-transform: scale(1, 1) translateY(0);
-            transform: scale(1, 1) translateY(0);
+    transform: scale(1, 1) translateY(0);
   }
   10% {
-    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
-            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
   }
   30% {
-    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
-            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
   }
   50% {
-    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
-            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
   }
   57% {
-    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
-            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
   }
   64% {
-    -webkit-transform: scale(1, 1) translateY(0);
-            transform: scale(1, 1) translateY(0);
+    transform: scale(1, 1) translateY(0);
   }
   100% {
-    -webkit-transform: scale(1, 1) translateY(0);
-            transform: scale(1, 1) translateY(0);
+    transform: scale(1, 1) translateY(0);
   }
 }
-
 @keyframes fa-bounce {
   0% {
-    -webkit-transform: scale(1, 1) translateY(0);
-            transform: scale(1, 1) translateY(0);
+    transform: scale(1, 1) translateY(0);
   }
   10% {
-    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
-            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
   }
   30% {
-    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
-            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
   }
   50% {
-    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
-            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
   }
   57% {
-    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
-            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
   }
   64% {
-    -webkit-transform: scale(1, 1) translateY(0);
-            transform: scale(1, 1) translateY(0);
+    transform: scale(1, 1) translateY(0);
   }
   100% {
-    -webkit-transform: scale(1, 1) translateY(0);
-            transform: scale(1, 1) translateY(0);
+    transform: scale(1, 1) translateY(0);
   }
 }
-
 @-webkit-keyframes fa-fade {
   50% {
     opacity: var(--fa-fade-opacity, 0.4);
   }
 }
-
 @keyframes fa-fade {
   50% {
     opacity: var(--fa-fade-opacity, 0.4);
   }
 }
-
 @-webkit-keyframes fa-beat-fade {
   0%, 100% {
     opacity: var(--fa-beat-fade-opacity, 0.4);
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   50% {
     opacity: 1;
-    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
-            transform: scale(var(--fa-beat-fade-scale, 1.125));
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
   }
 }
-
 @keyframes fa-beat-fade {
   0%, 100% {
     opacity: var(--fa-beat-fade-opacity, 0.4);
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   50% {
     opacity: 1;
-    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
-            transform: scale(var(--fa-beat-fade-scale, 1.125));
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
   }
 }
-
 @-webkit-keyframes fa-flip {
   50% {
-    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
-            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
   }
 }
-
 @keyframes fa-flip {
   50% {
-    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
-            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
   }
 }
-
 @-webkit-keyframes fa-shake {
   0% {
-    -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    transform: rotate(-15deg);
   }
   4% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
+    transform: rotate(15deg);
   }
   8%, 24% {
-    -webkit-transform: rotate(-18deg);
-            transform: rotate(-18deg);
+    transform: rotate(-18deg);
   }
   12%, 28% {
-    -webkit-transform: rotate(18deg);
-            transform: rotate(18deg);
+    transform: rotate(18deg);
   }
   16% {
-    -webkit-transform: rotate(-22deg);
-            transform: rotate(-22deg);
+    transform: rotate(-22deg);
   }
   20% {
-    -webkit-transform: rotate(22deg);
-            transform: rotate(22deg);
+    transform: rotate(22deg);
   }
   32% {
-    -webkit-transform: rotate(-12deg);
-            transform: rotate(-12deg);
+    transform: rotate(-12deg);
   }
   36% {
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg);
+    transform: rotate(12deg);
   }
   40%, 100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
-
 @keyframes fa-shake {
   0% {
-    -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    transform: rotate(-15deg);
   }
   4% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
+    transform: rotate(15deg);
   }
   8%, 24% {
-    -webkit-transform: rotate(-18deg);
-            transform: rotate(-18deg);
+    transform: rotate(-18deg);
   }
   12%, 28% {
-    -webkit-transform: rotate(18deg);
-            transform: rotate(18deg);
+    transform: rotate(18deg);
   }
   16% {
-    -webkit-transform: rotate(-22deg);
-            transform: rotate(-22deg);
+    transform: rotate(-22deg);
   }
   20% {
-    -webkit-transform: rotate(22deg);
-            transform: rotate(22deg);
+    transform: rotate(22deg);
   }
   32% {
-    -webkit-transform: rotate(-12deg);
-            transform: rotate(-12deg);
+    transform: rotate(-12deg);
   }
   36% {
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg);
+    transform: rotate(12deg);
   }
   40%, 100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
-
 @-webkit-keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 @keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 .fa-rotate-90 {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
-  -webkit-transform: scale(-1, 1);
-          transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
-  -webkit-transform: scale(1, -1);
-          transform: scale(1, -1);
+  transform: scale(1, -1);
 }
 
 .fa-flip-both,
 .fa-flip-horizontal.fa-flip-vertical {
-  -webkit-transform: scale(-1, -1);
-          transform: scale(-1, -1);
+  transform: scale(-1, -1);
 }
 
 .fa-rotate-by {
-  -webkit-transform: rotate(var(--fa-rotate-angle, none));
-          transform: rotate(var(--fa-rotate-angle, none));
+  transform: rotate(var(--fa-rotate-angle, none));
 }
 
 .fa-stack {
@@ -642,47 +571,47 @@ body {
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
 .fa-0::before {
-  content: "\30";
+  content: "\30 ";
 }
 
 .fa-1::before {
-  content: "\31";
+  content: "\31 ";
 }
 
 .fa-2::before {
-  content: "\32";
+  content: "\32 ";
 }
 
 .fa-3::before {
-  content: "\33";
+  content: "\33 ";
 }
 
 .fa-4::before {
-  content: "\34";
+  content: "\34 ";
 }
 
 .fa-5::before {
-  content: "\35";
+  content: "\35 ";
 }
 
 .fa-6::before {
-  content: "\36";
+  content: "\36 ";
 }
 
 .fa-7::before {
-  content: "\37";
+  content: "\37 ";
 }
 
 .fa-8::before {
-  content: "\38";
+  content: "\38 ";
 }
 
 .fa-9::before {
-  content: "\39";
+  content: "\39 ";
 }
 
 .fa-a::before {
-  content: "\41";
+  content: "A";
 }
 
 .fa-address-book::before {
@@ -1098,11 +1027,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-asterisk::before {
-  content: "\2a";
+  content: "\*";
 }
 
 .fa-at::before {
-  content: "\40";
+  content: "\@";
 }
 
 .fa-atom::before {
@@ -1122,7 +1051,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-b::before {
-  content: "\42";
+  content: "B";
 }
 
 .fa-baby::before {
@@ -1646,7 +1575,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-c::before {
-  content: "\43";
+  content: "C";
 }
 
 .fa-cake-candles::before {
@@ -2510,7 +2439,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-d::before {
-  content: "\44";
+  content: "D";
 }
 
 .fa-database::before {
@@ -2626,15 +2555,15 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-dollar-sign::before {
-  content: "\24";
+  content: "\$";
 }
 
 .fa-dollar::before {
-  content: "\24";
+  content: "\$";
 }
 
 .fa-usd::before {
-  content: "\24";
+  content: "\$";
 }
 
 .fa-dolly::before {
@@ -2734,7 +2663,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-e::before {
-  content: "\45";
+  content: "E";
 }
 
 .fa-ear-deaf::before {
@@ -2858,7 +2787,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-equals::before {
-  content: "\3d";
+  content: "\=";
 }
 
 .fa-eraser::before {
@@ -2882,7 +2811,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-exclamation::before {
-  content: "\21";
+  content: "\!";
 }
 
 .fa-expand::before {
@@ -2918,7 +2847,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-f::before {
-  content: "\46";
+  content: "F";
 }
 
 .fa-face-angry::before {
@@ -3518,7 +3447,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-g::before {
-  content: "\47";
+  content: "G";
 }
 
 .fa-gamepad::before {
@@ -3654,7 +3583,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-greater-than::before {
-  content: "\3e";
+  content: "\>";
 }
 
 .fa-greater-than-equal::before {
@@ -3694,7 +3623,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-h::before {
-  content: "\48";
+  content: "H";
 }
 
 .fa-hammer::before {
@@ -3898,7 +3827,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-hashtag::before {
-  content: "\23";
+  content: "\#";
 }
 
 .fa-hat-cowboy::before {
@@ -4158,7 +4087,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-i::before {
-  content: "\49";
+  content: "I";
 }
 
 .fa-i-cursor::before {
@@ -4258,7 +4187,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-j::before {
-  content: "\4a";
+  content: "J";
 }
 
 .fa-jedi::before {
@@ -4278,7 +4207,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-k::before {
-  content: "\4b";
+  content: "K";
 }
 
 .fa-kaaba::before {
@@ -4314,7 +4243,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-l::before {
-  content: "\4c";
+  content: "L";
 }
 
 .fa-landmark::before {
@@ -4370,7 +4299,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-less-than::before {
-  content: "\3c";
+  content: "\<";
 }
 
 .fa-less-than-equal::before {
@@ -4498,7 +4427,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-m::before {
-  content: "\4d";
+  content: "M";
 }
 
 .fa-magnet::before {
@@ -4842,7 +4771,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-n::before {
-  content: "\4e";
+  content: "N";
 }
 
 .fa-naira-sign::before {
@@ -4878,7 +4807,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-o::before {
-  content: "\4f";
+  content: "O";
 }
 
 .fa-object-group::before {
@@ -4910,7 +4839,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-p::before {
-  content: "\50";
+  content: "P";
 }
 
 .fa-pager::before {
@@ -5046,11 +4975,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-percent::before {
-  content: "\25";
+  content: "\%";
 }
 
 .fa-percentage::before {
-  content: "\25";
+  content: "\%";
 }
 
 .fa-person::before {
@@ -5250,11 +5179,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-plus::before {
-  content: "\2b";
+  content: "\+";
 }
 
 .fa-add::before {
-  content: "\2b";
+  content: "\+";
 }
 
 .fa-plus-minus::before {
@@ -5318,7 +5247,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-q::before {
-  content: "\51";
+  content: "Q";
 }
 
 .fa-qrcode::before {
@@ -5326,7 +5255,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-question::before {
-  content: "\3f";
+  content: "\?";
 }
 
 .fa-quote-left::before {
@@ -5346,7 +5275,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-r::before {
-  content: "\52";
+  content: "R";
 }
 
 .fa-radiation::before {
@@ -5582,7 +5511,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-s::before {
-  content: "\53";
+  content: "S";
 }
 
 .fa-sailboat::before {
@@ -6290,7 +6219,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-t::before {
-  content: "\54";
+  content: "T";
 }
 
 .fa-table::before {
@@ -6774,7 +6703,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-u::before {
-  content: "\55";
+  content: "U";
 }
 
 .fa-umbrella::before {
@@ -6994,7 +6923,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-v::before {
-  content: "\56";
+  content: "V";
 }
 
 .fa-van-shuttle::before {
@@ -7126,7 +7055,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-w::before {
-  content: "\57";
+  content: "W";
 }
 
 .fa-wallet::before {
@@ -7262,7 +7191,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-x::before {
-  content: "\58";
+  content: "X";
 }
 
 .fa-x-ray::before {
@@ -7290,7 +7219,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-y::before {
-  content: "\59";
+  content: "Y";
 }
 
 .fa-yen-sign::before {
@@ -7318,7 +7247,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-z::before {
-  content: "\5a";
+  content: "Z";
 }
 
 .sr-only,
@@ -7357,16 +7286,15 @@ readers do not read off random characters that represent icons */
 }
 
 @font-face {
-  font-family: 'Font Awesome 6 Free';
+  font-family: "Font Awesome 6 Free";
   font-style: normal;
   font-weight: 400;
   font-display: block;
   src: url("../fonts/fontawesome-free-6.0.0-web/webfonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fontawesome-free-6.0.0-web/webfonts/fa-regular-400.ttf") format("truetype");
 }
-
 .far,
 .fa-regular {
-  font-family: 'Font Awesome 6 Free';
+  font-family: "Font Awesome 6 Free";
   font-weight: 400;
 }
 
@@ -7380,23 +7308,22 @@ readers do not read off random characters that represent icons */
 }
 
 @font-face {
-  font-family: 'Font Awesome 6 Free';
+  font-family: "Font Awesome 6 Free";
   font-style: normal;
   font-weight: 900;
   font-display: block;
   src: url("../fonts/fontawesome-free-6.0.0-web/webfonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fontawesome-free-6.0.0-web/webfonts/fa-solid-900.ttf") format("truetype");
 }
-
 .fas,
 .fa-solid,
-.icon.music,
-.icon.mute,
-.icon.arrow-down,
-.icon.date,
-.icon.time,
+.icon.close,
 .icon.address,
-.icon.close {
-  font-family: 'Font Awesome 6 Free';
+.icon.time,
+.icon.date,
+.icon.arrow-down,
+.icon.mute,
+.icon.music {
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
 
@@ -7410,17 +7337,16 @@ readers do not read off random characters that represent icons */
 }
 
 @font-face {
-  font-family: 'Font Awesome 6 Brands';
+  font-family: "Font Awesome 6 Brands";
   font-style: normal;
   font-weight: 400;
   font-display: block;
   src: url("../fonts/fontawesome-free-6.0.0-web/webfonts/fa-brands-400.woff2") format("woff2"), url("../fonts/fontawesome-free-6.0.0-web/webfonts/fa-brands-400.ttf") format("truetype");
 }
-
 .fab,
 .fa-brands,
 .icon.instagram {
-  font-family: 'Font Awesome 6 Brands';
+  font-family: "Font Awesome 6 Brands";
   font-weight: 400;
 }
 
@@ -9303,14 +9229,12 @@ readers do not read off random characters that represent icons */
   font-weight: normal;
   font-style: normal;
 }
-
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: "Flaticon";
     src: url("./Flaticon.svg#Flaticon") format("svg");
   }
 }
-
 .fimanager:before {
   display: inline-block;
   font-family: "Flaticon";
@@ -9525,54 +9449,46 @@ readers do not read off random characters that represent icons */
   font-family: "Wedding";
   src: url("../fonts/Wedding/Flaticon.ttf");
 }
-
 @font-face {
   font-family: "Brittany";
   src: url("../fonts/BrittanySignature/BrittanySignature.ttf");
 }
-
 @font-face {
   font-family: "Overlock";
   src: url("../fonts/Overlock/Overlock-Regular.ttf");
   font-weight: 500;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Overlock";
   src: url("../fonts/Overlock/Overlock-Italic.ttf");
   font-weight: 500;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Overlock";
   src: url("../fonts/Overlock/Overlock-Bold.ttf");
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Overlock";
   src: url("../fonts/Overlock/Overlock-BoldItalic.ttf");
   font-weight: 700;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Overlock";
   src: url("../fonts/Overlock/Overlock-Black.ttf");
   font-weight: 900;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Overlock";
   src: url("../fonts/Overlock/Overlock-BlackItalic.ttf");
   font-weight: 900;
   font-style: italic;
 }
-
 html {
   font-size: 18px;
   color: #3d2828;
@@ -9585,27 +9501,17 @@ body {
 }
 
 /* CARDS */
-.card, div[class^="card-"] {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.card, div[class^=card-] {
   display: flex;
   gap: 1em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   background-color: #fcfcfc;
   border-radius: 10px;
   padding: 20px;
 }
-
-.card .title, div[class^="card-"] .title {
+.card .title, div[class^=card-] .title {
   position: relative;
   width: 100%;
   padding: 10px;
@@ -9613,8 +9519,7 @@ body {
   font-style: italic;
   text-align: center;
 }
-
-.card .title::after, div[class^="card-"] .title::after {
+.card .title::after, div[class^=card-] .title::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -9623,19 +9528,18 @@ body {
   height: 2px;
   background-color: #3d2828;
 }
-
-.card .content, div[class^="card-"] .content {
+.card .content, div[class^=card-] .content {
   width: 100%;
   font-size: 1.2rem;
 }
 
 /* BUTTONS */
-.btn, div[class^="btn-"], form input.btn-fill {
+.btn, form input.btn-fill, div[class^=btn-] {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-color: #e3b7a3;
+  background-color: #e6ae98;
   color: #3d2828;
   border-radius: 10px;
   padding: 8px 16px;
@@ -9663,44 +9567,23 @@ body {
 }
 
 form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 0.5em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
-
 form .form-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 0.25em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
 }
-
 form .form-group label {
   font-size: 1.6rem;
 }
-
 form .form-group input,
 form .form-group textarea {
   border: 2px solid #3d2828;
@@ -9712,12 +9595,10 @@ form .form-group textarea {
   font-size: 1.2rem;
   font-family: inherit;
 }
-
 form .form-group textarea {
   min-height: 120px;
   resize: none;
 }
-
 form input.btn-fill {
   font-family: "Overlock";
   font-weight: 500;
@@ -9725,94 +9606,69 @@ form input.btn-fill {
 }
 
 .after-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 0.5em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon.music::before {
   content: "\f001";
 }
-
 .icon.mute::before {
   content: "\f6a9";
 }
-
 .icon.arrow-down::before {
   content: "\f13a";
 }
-
 .icon.instagram::before {
   content: "\f16d";
 }
-
 .icon.date::before {
   content: "\f783";
 }
-
 .icon.time::before {
   content: "\f017";
 }
-
 .icon.address::before {
   content: "\f5a0";
 }
-
 .icon.close::before {
   content: "\f00d";
 }
 
 .glass {
-  background: linear-gradient(218.99deg, rgba(255, 255, 255, 0.4) 4.42%, #e3b7a383 85.6%);
+  background: linear-gradient(218.99deg, rgba(255, 255, 255, 0.4) 4.42%, rgba(227, 183, 163, 0.5137254902) 85.6%);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
 .glass:hover, .glass.active {
-  background: linear-gradient(218.99deg, rgba(255, 255, 255, 0.7) 4.42%, #e3b7a3d7 85.6%);
+  background: linear-gradient(218.99deg, rgba(255, 255, 255, 0.7) 4.42%, rgba(227, 183, 163, 0.8431372549) 85.6%);
 }
 
-.shadows, .card, div[class^="card-"], .btn, div[class^="btn-"], form input.btn-fill {
-  -webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-  -webkit-transition: 500ms;
+.shadows, .card, div[class^=card-], .btn, div[class^=btn-], form input.btn-fill {
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   transition: 500ms;
 }
-
-.shadows:hover, .card:hover, div:hover[class^="card-"], .btn:hover, div:hover[class^="btn-"], form input.btn-fill:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+.shadows:hover, .card:hover, div[class^=card-]:hover, .btn:hover, div[class^=btn-]:hover, form input.btn-fill:hover {
+  transform: scale(1.02);
 }
-
-.shadows:hover, .card:hover, div:hover[class^="card-"], .btn:hover, div:hover[class^="btn-"], form input.btn-fill:hover {
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+.shadows:hover, .card:hover, div[class^=card-]:hover, .btn:hover, div[class^=btn-]:hover, form input.btn-fill:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
   z-index: 3;
 }
 
 .box {
-  -webkit-transition: 500ms;
   transition: 500ms;
   border-radius: 10px;
   cursor: pointer;
 }
-
 .box:hover {
-  background-color: #0000006e;
+  background-color: rgba(0, 0, 0, 0.431372549);
 }
 
 body::-webkit-scrollbar {
@@ -9831,16 +9687,22 @@ body::-webkit-scrollbar-thumb {
   html {
     font-size: 14px;
   }
+  #cover {
+    background-image: url("../images/background/cover_bg_mobile.JPG");
+    background-color: rgba(0, 0, 0, 0.431372549);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-blend-mode: soft-light;
+    background-size: cover;
+  }
   /* PAGE-LOADER */
   #page-loader img {
     width: 50vw;
   }
   #navigation {
-    -webkit-transition: 500ms;
     transition: 500ms;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     top: unset;
     right: unset;
     bottom: -10vh;
@@ -9853,20 +9715,11 @@ body::-webkit-scrollbar-thumb {
     bottom: 0px;
   }
   #navigation ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 0px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     width: min(100vw, 500px);
     height: 100%;
   }
@@ -9881,7 +9734,6 @@ body::-webkit-scrollbar-thumb {
     padding-right: 0;
   }
 }
-
 body#m-body {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -9892,53 +9744,28 @@ body#m-body {
   text-align: center;
   margin: 5%;
 }
-
 #content-messages > #messages {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 1em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
-
 #content-messages > #messages > .card-message {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 0.5em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
   width: min(80vw, 500px);
   padding: 3% 5%;
 }
-
 #content-messages > #messages > .card-message .m-name {
   font-size: 1.6rem;
 }
-
 #content-messages > #messages > .card-message .m-wish {
   text-align: justify;
 }
-
 #content-messages > #messages > .card-message .m-date {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-/*# sourceMappingURL=messages.css.map */
+  align-self: flex-end;
+}/*# sourceMappingURL=messages.css.map */
