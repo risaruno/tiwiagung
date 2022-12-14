@@ -124,7 +124,7 @@ window.onload = () => {
   // });
 
   /* COUNTDOWN */
-  let dDay = new Date("March 20, 2022 08:00:00").getTime();
+  let dDay = new Date("December 22, 2022 09:00:00").getTime();
   setInterval(function () {
     let now = new Date().getTime();
     let distance = dDay - now;

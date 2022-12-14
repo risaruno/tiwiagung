@@ -5,6 +5,10 @@
     font-size: $root-size;
   }
 
+  #cover {
+    @include background($cover-background-mobile);
+  }
+
   /* PAGE-LOADER */
 
   #page-loader {
