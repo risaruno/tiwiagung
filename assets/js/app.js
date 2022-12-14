@@ -175,4 +175,20 @@ window.onload = () => {
     //Disable background playing - removeEventListener
     document.removeEventListener("visibilitychange", playOnHold);
   }
+
+  /* SWIPER */
+  var swiper = new Swiper(".theSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  
 };
