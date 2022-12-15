@@ -9656,14 +9656,14 @@ form input.btn-fill {
   background: linear-gradient(218.99deg, rgba(255, 255, 255, 0.7) 4.42%, rgba(227, 183, 163, 0.8431372549) 85.6%);
 }
 
-.shadows, #couple .profile-container .profile .photo-container img, .card, div[class^=card-], .btn, div[class^=btn-], form input.btn-fill {
+.shadows, #gallery .gallery-container img, #couple .profile-container .profile .photo-container img, .card, div[class^=card-], .btn, div[class^=btn-], form input.btn-fill {
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   transition: 500ms;
 }
-.shadows:hover, #couple .profile-container .profile .photo-container img:hover, .card:hover, div[class^=card-]:hover, .btn:hover, div[class^=btn-]:hover, form input.btn-fill:hover {
+.shadows:hover, #gallery .gallery-container img:hover, #couple .profile-container .profile .photo-container img:hover, .card:hover, div[class^=card-]:hover, .btn:hover, div[class^=btn-]:hover, form input.btn-fill:hover {
   transform: scale(1.02);
 }
-.shadows:hover, #couple .profile-container .profile .photo-container img:hover, .card:hover, div[class^=card-]:hover, .btn:hover, div[class^=btn-]:hover, form input.btn-fill:hover {
+.shadows:hover, #gallery .gallery-container img:hover, #couple .profile-container .profile .photo-container img:hover, .card:hover, div[class^=card-]:hover, .btn:hover, div[class^=btn-]:hover, form input.btn-fill:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
   z-index: 3;
 }
@@ -10137,53 +10137,20 @@ a {
 }
 
 #gallery {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+#gallery .gallery-container {
   display: flex;
   gap: 0.5em;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  padding-top: 8em;
-  padding-bottom: 8em;
 }
-#gallery .swiper {
-  display: flex;
-  gap: 0px;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+#gallery .gallery-container img {
   width: min(80vw, 500px);
-  /* Start Override */
-  margin: unset;
-  overflow: hidden;
-  /* End Override */
-}
-#gallery .swiper .swiper-button-next,
-#gallery .swiper .swiper-button-prev {
-  transition: 500ms;
-  color: #3d2828;
-}
-#gallery .swiper .swiper-button-next:hover,
-#gallery .swiper .swiper-button-prev:hover {
-  transform: scale(1.2);
-}
-#gallery .swiper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#gallery .swiper .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#gallery .swiper .swiper {
-  margin-left: auto;
-  margin-right: auto;
+  flex: 50%;
+  border-radius: 10px;
 }
 
 #wish {

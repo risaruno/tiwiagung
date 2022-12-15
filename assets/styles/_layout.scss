@@ -406,39 +406,15 @@ a {
 // GALLERY
 
 #gallery {
-  @include flex(0.5em);
   padding-top: 8em;
   padding-bottom: 8em;
-  .swiper {
-    @include flex();
-    width: $min-width;
-    /* Start Override */
-    margin: unset;
-    overflow: hidden;
-    .swiper-button-next,
-    .swiper-button-prev {
-      @include scaleUp(1.2);
-      color: $dark-color;
-    }
-    /* End Override */
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-
-      /* Center slide text vertically */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    .swiper {
-      margin-left: auto;
-      margin-right: auto;
+  .gallery-container {
+    @include flex(0.5em);
+    img {
+      width: $min-width;
+      flex: 50%;
+      border-radius: $border-radius;
+      @extend .shadows;
     }
   }
 }
