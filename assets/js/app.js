@@ -18,6 +18,18 @@ window.onload = () => {
     nameBox.value = guest;
   }
 
+  /* Save Date Button */
+  let btn = [];
+  btn = document.querySelectorAll(".save-date-btn");
+  for (let i = 0; i < btn.length; i++) {
+    btn[i].addEventListener("click", () => {
+      let url = btn[i].getAttribute("target");
+      if (url != "") {
+        window.open(url, "_blank");
+      }
+    });
+  }
+
   /* Open Button */
   document.getElementById("open").addEventListener("click", () => {
     window.scrollTo(0, 0);
@@ -124,7 +136,7 @@ window.onload = () => {
   // });
 
   /* COUNTDOWN */
-  let dDay = new Date("March 20, 2022 08:00:00").getTime();
+  let dDay = new Date("May 7, 2023 10:00:00").getTime();
   setInterval(function () {
     let now = new Date().getTime();
     let distance = dDay - now;
